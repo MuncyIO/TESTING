@@ -1,3 +1,4 @@
+#if canImport(AppKit) && canImport(Vision)
 import Foundation
 import Vision
 import AppKit
@@ -63,3 +64,4 @@ final class OCRService {
         return nil
     }
 }
+#endif

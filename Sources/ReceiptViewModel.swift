@@ -1,3 +1,4 @@
+#if canImport(SwiftUI) && canImport(CoreData) && canImport(Quartz)
 import SwiftUI
 import CoreData
 import Combine
@@ -51,3 +52,4 @@ final class ReceiptViewModel: ObservableObject {
         try? context.save()
     }
 }
+#endif

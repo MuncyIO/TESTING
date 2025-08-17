@@ -1,3 +1,4 @@
+#if canImport(SwiftUI)
 import SwiftUI
 
 /// Utility initialiser to create Color from hex string.
@@ -23,3 +24,4 @@ extension Color {
     static let textPrimary = Color(hex: "#FFFFFF")
     static let textMuted = Color(hex: "#BDBDBD")
 }
+#endif

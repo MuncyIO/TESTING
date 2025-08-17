@@ -1,3 +1,4 @@
+#if canImport(AppKit)
 import Foundation
 import AppKit
 
@@ -39,3 +40,4 @@ extension NSImage {
         return rep.representation(using: .png, properties: [:])
     }
 }
+#endif

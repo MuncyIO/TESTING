@@ -1,3 +1,4 @@
+#if canImport(SwiftUI) && canImport(CoreData)
 import SwiftUI
 import CoreData
 
@@ -85,3 +86,4 @@ extension NumberFormatter {
         return nf
     }()
 }
+#endif

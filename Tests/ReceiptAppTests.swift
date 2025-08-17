@@ -1,3 +1,4 @@
+#if canImport(CoreData)
 import XCTest
 import CoreData
 @testable import ReceiptApp
@@ -19,3 +20,4 @@ final class ReceiptAppTests: XCTestCase {
         XCTAssertEqual(results.first?.imagePath, "test.png")
     }
 }
+#endif
