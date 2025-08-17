@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17710" systemVersion="20A2408" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Receipt" representedClassName="Receipt" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="NO" attributeType="UUID"/>
+        <attribute name="vendor" optional="YES" attributeType="String"/>
+        <attribute name="total" optional="YES" attributeType="Decimal"/>
+        <attribute name="date" optional="YES" attributeType="Date"/>
+        <attribute name="tags" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="imagePath" optional="NO" attributeType="String"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date"/>
+    </entity>
+    <elements>
+        <element name="Receipt" positionX="160" positionY="160" width="128" height="128"/>
+    </elements>
+</model>
