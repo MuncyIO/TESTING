@@ -1,6 +1,7 @@
-#if canImport(SwiftUI) && canImport(CoreData)
+#if canImport(SwiftUI) && canImport(CoreData) && canImport(AppKit)
 import SwiftUI
 import CoreData
+import AppKit
 
 /// Displays receipts in a scrolling list with ability to add new ones.
 struct ReceiptListView: View {
