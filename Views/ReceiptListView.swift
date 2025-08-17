@@ -70,7 +70,7 @@ struct ReceiptRowView: View {
             }
             Spacer()
             if let total = receipt.total {
-                Text(NumberFormatter.currency.string(from: total) ?? "")
+                Text(NumberFormatter.currency.string(for: total) ?? "")
                     .foregroundColor(.textPrimary)
             }
         }
