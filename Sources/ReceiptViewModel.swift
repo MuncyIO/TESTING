@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreData
 import Combine
-import Quartz
+import AppKit
 
 /// View model driving receipt operations such as importing and deleting.
 final class ReceiptViewModel: ObservableObject {
@@ -14,11 +14,13 @@ final class ReceiptViewModel: ObservableObject {
         self.imageStore = imageStore
     }
 
-    /// Opens an image picker (camera or file) and imports the resulting image as a receipt.
+    /// Opens a file picker to import an image as a receipt.
     func addReceipt() {
-        let picker = IKPictureTaker()
-        picker.begin { returnCode in
-            guard returnCode == .OK, let image = picker.outputImage() else { return }
+        let panel = NSOpenPanel()
+        panel.allowedFileTypes = NSImage.imageTypes
+        panel.begin { response in
+            guard response == .OK, let url = panel.url,
+                  let image = NSImage(contentsOf: url) else { return }
             self.handleImport(image: image)
         }
     }
