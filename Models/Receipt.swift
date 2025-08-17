@@ -7,7 +7,7 @@ import CoreData
 public class Receipt: NSManagedObject, Identifiable {
     @NSManaged public var id: UUID?
     @NSManaged public var vendor: String?
-    @NSManaged public var total: NSDecimalNumber?
+    @NSManaged public var total: Decimal?
     @NSManaged public var date: Date?
     @NSManaged public var tags: [String]?
     @NSManaged public var imagePath: String

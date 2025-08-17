@@ -3,7 +3,7 @@
     <entity name="Receipt" representedClassName="Receipt" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID"/>
         <attribute name="vendor" optional="YES" attributeType="String"/>
-        <attribute name="total" optional="YES" attributeType="Decimal"/>
+        <attribute name="total" optional="YES" attributeType="Decimal" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date"/>
         <attribute name="tags" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
         <attribute name="imagePath" optional="NO" attributeType="String"/>

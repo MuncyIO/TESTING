@@ -42,7 +42,7 @@ final class ReceiptViewModel: ObservableObject {
         receipt.vendor = ""
         ocrService.extract(from: image) { result in
             receipt.vendor = result.vendor ?? receipt.vendor
-            receipt.total = result.total as NSDecimalNumber?
+            receipt.total = result.total
             receipt.date = result.date
             try? self.context.save()
         }

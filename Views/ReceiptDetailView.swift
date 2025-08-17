@@ -20,7 +20,7 @@ struct ReceiptDetailView: View {
                 }
                 Form {
                     TextField("Vendor", text: Binding($receipt.vendor, ""))
-                    TextField("Total", value: $receipt.total, formatter: NumberFormatter.currency)
+                    TextField("Total", value: Binding($receipt.total, Decimal(0)), formatter: NumberFormatter.currency)
                     DatePicker("Date", selection: Binding($receipt.date, Date()), displayedComponents: .date)
                     TextField("Tags", text: $tagsText)
                         .onAppear { tagsText = receipt.tags?.joined(separator: ", ") ?? "" }
