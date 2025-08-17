@@ -4,7 +4,6 @@ import CoreData
 
 /// Displays receipts in a scrolling list with ability to add new ones.
 struct ReceiptListView: View {
-    @Environment(\.managedObjectContext) private var context
     @StateObject private var viewModel: ReceiptViewModel
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Receipt.createdAt, ascending: false)],
