@@ -19,7 +19,7 @@ Minimal macOS receipt tracker built with SwiftUI and Core Data. This is the firs
 
 ## Local Data Model
 `Receipt` entity fields:
-- `id: UUID`
+- `id: UUID?`
 - `vendor: String?`
 - `total: Decimal?`
 - `date: Date?`

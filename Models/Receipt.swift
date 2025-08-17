@@ -5,7 +5,7 @@ import CoreData
 /// Core Data entity representing a receipt.
 @objc(Receipt)
 public class Receipt: NSManagedObject, Identifiable {
-    @NSManaged public var id: UUID
+    @NSManaged public var id: UUID?
     @NSManaged public var vendor: String?
     @NSManaged public var total: NSDecimalNumber?
     @NSManaged public var date: Date?
