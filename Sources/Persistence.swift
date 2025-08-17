@@ -1,3 +1,5 @@
+import Foundation
+#if canImport(CoreData)
 import CoreData
 
 /// Handles Core Data stack for the application.
@@ -27,3 +29,17 @@ struct PersistenceController {
         }
     }
 }
+#else
+/// Fallback persistence controller used on platforms without CoreData.
+struct PersistenceController {
+    static let shared = PersistenceController()
+    /// Placeholder container to satisfy cross-platform builds.
+    let container: Void? = nil
+
+    init(inMemory: Bool = false) {}
+
+    /// No-op save on non-CoreData platforms.
+    func save() {}
+}
+#endif
+

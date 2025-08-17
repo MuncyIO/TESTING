@@ -1,3 +1,4 @@
+#if canImport(SwiftUI) && canImport(CoreData)
 import SwiftUI
 import CoreData
 
@@ -57,3 +58,4 @@ extension Binding {
         )
     }
 }
+#endif
