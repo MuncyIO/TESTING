@@ -5,7 +5,7 @@ import CoreData
 struct ReceiptDetailView: View {
     @ObservedObject var receipt: Receipt
     @Environment(\.managedObjectContext) private var context
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
     @State private var tagsText: String = ""
 
     var body: some View {
@@ -33,7 +33,7 @@ struct ReceiptDetailView: View {
                     Button(role: .destructive) {
                         context.delete(receipt)
                         try? context.save()
-                        dismiss()
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("Delete")
                     }
